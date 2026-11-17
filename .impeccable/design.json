@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 2,
+  "generatedFrom": "scan",
+  "northStar": "Fase Pixel 8-bit — a página inteira é uma fase de plataforma estilo Mario; o conteúdo vive em painéis de pergaminho revelados pelo jogo, com modo leitura direto para quem não joga.",
+  "colorMeta": {
+    "sky": { "role": "background", "note": "Cenário apenas; nunca atrás de texto de leitura" },
+    "gold": { "role": "signal", "note": "Coletável, banner de fase, marcador de lista, anel de foco" },
+    "accent": { "role": "primary", "note": "Botão 'ver conteúdo', bandeira, camiseta do personagem — nunca texto sobre papel" },
+    "accent-dark": { "role": "primary-text", "note": "#e52521 falha contraste sobre papel; texto vermelho usa este tom (~6.2:1)" },
+    "ink": { "role": "neutral", "note": "Texto, HUD, molduras, tags — o 'preto' do mundo" },
+    "paper": { "role": "surface", "note": "Pergaminho dos painéis de conteúdo" }
+  },
+  "typographyMeta": {
+    "display": { "displayName": "Press Start 2P — título do céu", "note": "self-hosted TTF em fonts/, licença OFL" },
+    "ui-pixel": { "displayName": "Press Start 2P — UI", "note": "piso absoluto de 11px em texto funcional" }
+  },
+  "extensions": {
+    "elevation": {
+      "philosophy": "sombra dura deslocada = segundo plano de pixels, não luz; blur proibido",
+      "tokens": {
+        "panel-shadow": "8px 8px 0 rgba(0,0,0,.3)",
+        "hud-shadow": "0 4px 0 rgba(0,0,0,.25)",
+        "title-outline": "4px 4px 0 #ffffff"
+      },
+      "waivedBy": "data-impeccable-ignore=hard-offset-shadow nos elementos portadores"
+    },
+    "motion": {
+      "coin": "bob keyframe infinito",
+      "panel-reveal": "opacity+translateY .4s ease ao .zone.reached",
+      "reduced-motion": "@media (prefers-reduced-motion: reduce) desliga animação e transição"
+    },
+    "breakpoints": { "mobile": "720px" },
+    "modes": {
+      "reading": "body.reading transforma o DOM em página tradicional; aberturas: botão 'ver conteúdo', #conteudo, #content, <noscript>",
+      "deep-links": "?lang=pt|en força idioma; #panel-<zona> abre seção direto"
+    }
+  },
+  "rules": [
+    "Texto funcional >= 11px mesmo em Press Start 2P",
+    "Uma metáfora só: qualquer novidade vira objeto de fase (zona + placa + painel)",
+    "Todo texto passa por data-i18n + dicionário PT/EN em js/i18n.js",
+    "border-left colorido é proibido; marcador quadrado dourado é a assinatura",
+    "Painel escondido fica fora da ordem de tab: visibility acompanha opacity"
+  ],
+  "components": {
+    "hud-button-primary": {
+      "html": "<button class=\"hud-btn hud-btn-content\">ver conteúdo</button>",
+      "css": ".hud-btn{font-family:'Press Start 2P',monospace;font-size:11px;padding:8px 12px;background:#202030;color:#fff;border:3px solid #fff}.hud-btn-content{background:#e52521}"
+    },
+    "content-panel": {
+      "html": "<article class=\"panel\"><h2 class=\"panel-title\">TÍTULO</h2><p>texto</p></article>",
+      "css": ".panel{background:#f3ead8;border:5px solid #8a5a2b;box-shadow:8px 8px 0 rgba(0,0,0,.3);padding:24px 28px;width:480px}.panel-title{font-family:'Press Start 2P',monospace;font-size:20px;color:#202030}"
+    },
+    "text-link": {
+      "html": "<a class=\"panel-link\" href=\"#\">ver no GitHub</a>",
+      "css": ".panel-link{font-family:'Press Start 2P',monospace;font-size:11px;color:#b0120a;text-decoration:none;border-bottom:3px solid #b0120a}.panel-link:hover{color:#6b3f1c;border-color:#6b3f1c}"
+    },
+    "skill-tag": {
+      "html": "<ul class=\"tag-list\"><li>Cypress</li></ul>",
+      "css": ".tag-list li{font-family:'Press Start 2P',monospace;font-size:11px;padding:6px 8px;background:#202030;color:#f3ead8}"
+    }
+  }
+}

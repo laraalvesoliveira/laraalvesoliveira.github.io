@@ -1,0 +1,13 @@
+# lixo de sistema
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# ferramentas locais (reinstaláveis; não fazem parte do site)
+_bmad/
+.agents/
+.devin/
+.impeccable/review/
+.impeccable/live/
+.impeccable/questions/
+docs/

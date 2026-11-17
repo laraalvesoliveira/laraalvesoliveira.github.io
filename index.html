@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lara Alves · Portfólio</title>
+<meta name="description" content="Portfólio de Lara Alves de Oliveira em formato de jogo plataforma: currículo e projetos dentro de uma fase side-scroll.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%23e52521'/><rect x='4' y='4' width='8' height='8' fill='%23ffd800'/><rect x='7' y='6' width='2' height='4' fill='%23202030'/><rect x='7' y='11' width='2' height='2' fill='%23202030'/></svg>">
+<meta property="og:title" content="Lara Alves · Portfólio">
+<meta property="og:description" content="Portfólio em formato de jogo plataforma: currículo e projetos dentro de uma fase side-scroll.">
+<meta property="og:type" content="website">
+<noscript><style>
+  body { background:#dfe9f5; }
+  #game { height:auto; overflow:visible; padding-bottom:80px; background:#dfe9f5; }
+  #world { position:static; width:auto; transform:none !important; }
+  .zone { position:static; width:auto; display:flex; justify-content:center; padding:40px 16px; }
+  .zone > :not(.panel) { display:none !important; }
+  .panel { position:relative; left:auto; bottom:auto; width:min(760px,100%); max-height:none; opacity:1; visibility:visible; transform:none; }
+  #player, #ground, #touch-controls, #controls-hint, #win-banner, .sky-title { display:none !important; }
+  .footer { position:static; }
+</style></noscript>
+</head>
+<body>
+
+<!-- HUD: barra fixa do jogo -->
+<header class="hud" data-impeccable-ignore="hard-offset-shadow">
+  <div class="hud-group">
+    <span class="hud-coin" aria-hidden="true"></span>
+    <span id="coin-count" aria-label="moedas coletadas" aria-live="polite">×0</span>
+    <span id="zone-label" class="hud-zone"></span>
+  </div>
+  <div class="hud-group">
+    <button id="btn-content" class="hud-btn hud-btn-content" type="button" data-i18n="btn.content">ver conteúdo</button>
+    <button id="btn-lang" class="hud-btn" type="button" aria-label="switch language">EN</button>
+  </div>
+</header>
+
+<main>
+  <!-- ===================== A FASE ===================== -->
+  <section id="game" aria-label="jogo">
+    <div id="world">
+
+      <!-- ZONA 1 · SOBRE -->
+      <div class="zone" id="zone-sobre">
+        <div class="sky-title" aria-hidden="true">
+          <strong>LARA ALVES</strong>
+          <span data-i18n="sobre.fase">FASE 1-1 · PORTFÓLIO</span>
+        </div>
+        <div class="cloud c1" aria-hidden="true"></div>
+        <div class="cloud c2" aria-hidden="true"></div>
+        <div class="hill" aria-hidden="true"></div>
+        <div class="signpost" aria-hidden="true"><span data-i18n="zone.sobre">SOBRE</span></div>
+        <div class="qblock" style="--bx:340px" aria-hidden="true">?</div>
+        <div class="qblock" style="--bx:420px" aria-hidden="true">?</div>
+        <div class="coin" style="--cx:300px;--cy:120px" aria-hidden="true"></div>
+        <div class="coin" style="--cx:380px;--cy:80px" aria-hidden="true"></div>
+        <div class="coin" style="--cx:460px;--cy:120px" aria-hidden="true"></div>
+        <div class="coin" style="--cx:1060px;--cy:150px" aria-hidden="true"></div>
+        <div class="pipe p-small" style="--px:760px" aria-hidden="true"></div>
+        <div class="bush" style="--bx:520px" aria-hidden="true"></div>
+
+        <article class="panel" data-impeccable-ignore="hard-offset-shadow" style="--panel-x:560px">
+          <h1 class="panel-title">LARA ALVES</h1>
+          <p class="panel-sub" data-i18n="sobre.sub">Customer Success · Estudante de ADS</p>
+          <p data-i18n="sobre.p1">Profissional de tecnologia com experiência em suporte técnico e atendimento ao cliente: hospedagem web, DNS, cPanel, WordPress e GitHub. Hoje é estudante de Análise e Desenvolvimento de Sistemas.</p>
+          <p data-i18n="sobre.p2">Especialista em resolver problemas complexos, documentar processos e liderar times, aprendendo a construir o que antes eu só ajudava a consertar.</p>
+          <p class="panel-hint" data-i18n="panel.hint" aria-hidden="true">continue andando →</p>
+        </article>
+      </div>
+
+      <!-- ZONA 2 · CURRÍCULO -->
+      <div class="zone" id="zone-curriculo">
+        <div class="cloud c1" aria-hidden="true"></div>
+        <div class="cloud c3" aria-hidden="true"></div>
+        <div class="hill h2" aria-hidden="true"></div>
+        <div class="signpost" aria-hidden="true"><span data-i18n="zone.curriculo">CURRÍCULO</span></div>
+        <div class="qblock" style="--bx:120px" aria-hidden="true">?</div>
+        <div class="coin" style="--cx:150px;--cy:110px" aria-hidden="true"></div>
+        <div class="coin" style="--cx:780px;--cy:150px" aria-hidden="true"></div>
+        <div class="coin" style="--cx:840px;--cy:170px" aria-hidden="true"></div>
+        <div class="pipe p-tall" style="--px:820px" aria-hidden="true"></div>
+        <div class="bush" style="--bx:400px" aria-hidden="true"></div>
+
+        <article class="panel panel-wide" data-impeccable-ignore="hard-offset-shadow" style="--panel-x:180px">
+          <h2 class="panel-title" data-i18n="cv.title">CURRÍCULO</h2>
+
+          <h3 data-i18n="cv.exp">Experiência</h3>
+          <ul class="cv-list">
+            <li><strong>Mid Level Success Team Leader</strong> · Hostinger · 2022–2025<br>
+            <span data-i18n="cv.e1">Liderança de time de Customer Success; KPIs entre os melhores do time BR por ~12 meses; redução de especialistas abaixo da meta de 60%→20%.</span></li>
+            <li><strong>Senior IT Customer Success Specialist</strong> · Hostinger · 2020–2022<br>
+            <span data-i18n="cv.e2">Resolução de problemas técnicos complexos (hospedagem, DNS, configurações); documentação técnica e treinamentos internos.</span></li>
+            <li><strong data-i18n="cv.e3t">QA e Automação</strong> · Bootcamp Atlântico Avanti<br>
+            <span data-i18n="cv.e3">Testes funcionais e exploratórios; automação E2E com Cypress e JavaScript.</span></li>
+          </ul>
+
+          <h3 data-i18n="cv.skills">Habilidades</h3>
+          <ul class="tag-list">
+            <li>QA / Testes</li><li>Cypress</li><li>JavaScript</li><li>Git / GitHub</li>
+            <li>Jira</li><li>HTML / CSS</li><li>DNS / Hospedagem</li><li>Scrum / Kanban</li>
+          </ul>
+
+          <h3 data-i18n="cv.edu">Formação</h3>
+          <ul class="cv-list">
+            <li><span data-i18n="cv.edu1">Tecnólogo em Análise e Desenvolvimento de Sistemas (Belas Artes) · 2024–2026, em curso</span></li>
+            <li><span data-i18n="cv.edu2">Bacharelado em Relações Internacionais (SENAC) · 2015–2018</span></li>
+          </ul>
+
+          <h3 data-i18n="cv.lang">Idiomas</h3>
+          <ul class="cv-list">
+            <li><span data-i18n="cv.l1">Português (nativo)</span></li>
+            <li><span data-i18n="cv.l2">Inglês (avançado)</span></li>
+          </ul>
+          <p class="panel-hint" data-i18n="panel.hint" aria-hidden="true">continue andando →</p>
+        </article>
+      </div>
+
+      <!-- ZONA 3 · PROJETOS -->
+      <div class="zone" id="zone-projetos">
+        <div class="cloud c2" aria-hidden="true"></div>
+        <div class="cloud c3" aria-hidden="true"></div>
+        <div class="hill" aria-hidden="true"></div>
+        <div class="signpost" aria-hidden="true"><span data-i18n="zone.projetos">PROJETOS</span></div>
+        <div class="qblock" style="--bx:200px" aria-hidden="true">?</div>
+        <div class="qblock" style="--bx:280px" aria-hidden="true">?</div>
+        <div class="coin" style="--cx:240px;--cy:80px" aria-hidden="true"></div>
+        <div class="coin" style="--cx:1060px;--cy:130px" aria-hidden="true"></div>
+        <div class="coin" style="--cx:1130px;--cy:90px" aria-hidden="true"></div>
+        <div class="pipe p-small" style="--px:520px" aria-hidden="true"></div>
+        <div class="bush" style="--bx:700px" aria-hidden="true"></div>
+
+        <article class="panel panel-wide" data-impeccable-ignore="hard-offset-shadow" style="--panel-x:340px">
+          <h2 class="panel-title" data-i18n="proj.title">PROJETOS</h2>
+
+          <div class="project">
+            <h3>BugBusters</h3>
+            <p data-i18n="proj.p1">Projeto de testes do Bootcamp Atlântico Avanti: validação da aplicação QAzando (cadastro, login, busca, carrinho e contato) com testes manuais e automatizados.</p>
+            <p class="project-tags">Cypress · JavaScript · QA</p>
+            <a class="panel-link" href="https://github.com/laraalvesoliveira/projeto-bugbusters" target="_blank" rel="noopener" data-i18n="proj.link">ver no GitHub →</a>
+          </div>
+
+          <div class="project">
+            <h3>Conexão Verde</h3>
+            <p data-i18n="proj.p2">Projeto Integrador Multidisciplinar (PIM) desenvolvido em equipe a cada semestre: aplicação web para conectar pessoas a iniciativas sustentáveis.</p>
+            <p class="project-tags">HTML · CSS · JS · Firebase</p>
+            <a class="panel-link" href="https://github.com/nansfromspace/conexao-verde" target="_blank" rel="noopener" data-i18n="proj.link">ver no GitHub →</a>
+          </div>
+          <p class="panel-hint" data-i18n="panel.hint" aria-hidden="true">continue andando →</p>
+        </article>
+      </div>
+
+      <!-- ZONA 4 · CONTATO -->
+      <div class="zone" id="zone-contato">
+        <div class="cloud c1" aria-hidden="true"></div>
+        <div class="hill h2" aria-hidden="true"></div>
+        <div class="signpost" aria-hidden="true"><span data-i18n="zone.contato">CONTATO</span></div>
+        <div class="coin" style="--cx:200px;--cy:120px" aria-hidden="true"></div>
+        <div class="coin" style="--cx:280px;--cy:80px" aria-hidden="true"></div>
+        <div class="coin" style="--cx:820px;--cy:120px" aria-hidden="true"></div>
+        <div class="bush" style="--bx:180px" aria-hidden="true"></div>
+
+        <article class="panel" data-impeccable-ignore="hard-offset-shadow" style="--panel-x:300px">
+          <h2 class="panel-title" data-i18n="contact.title">CONTATO</h2>
+          <ul class="contact-list">
+            <li><span class="contact-key">E-mail</span><br><a class="panel-link" href="mailto:lara.alves.oliveira20@gmail.com">lara.alves.oliveira20@gmail.com</a></li>
+            <li><span class="contact-key">GitHub</span><br><a class="panel-link" href="https://github.com/laraalvesoliveira" target="_blank" rel="noopener">github.com/laraalvesoliveira</a></li>
+            <li><span class="contact-key" data-i18n="contact.phone">Telefone</span><br><a class="panel-link" href="tel:+5511964312477">+55 11 96431-2477</a></li>
+            <!-- TODO: adicionar link do LinkedIn quando disponível -->
+          </ul>
+          <p class="panel-hint" data-i18n="panel.hint" aria-hidden="true">continue andando →</p>
+        </article>
+
+        <div class="goal" aria-hidden="true">
+          <div class="goal-pole"></div>
+          <div class="goal-flag">★</div>
+        </div>
+        <div class="castle" aria-hidden="true">
+          <div class="castle-top" data-impeccable-ignore="repeating-stripes-gradient"></div>
+          <div class="castle-body" data-impeccable-ignore="repeating-stripes-gradient"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <canvas id="player" width="32" height="40" aria-hidden="true"></canvas>
+    <div id="ground" aria-hidden="true" data-impeccable-ignore="repeating-stripes-gradient"></div>
+
+    <div id="win-banner" hidden data-impeccable-ignore="hard-offset-shadow">
+      <p data-i18n="win.msg">FASE COMPLETA!</p>
+      <button id="btn-again" class="hud-btn" type="button" data-i18n="win.again">jogar de novo</button>
+    </div>
+
+    <p id="controls-hint" data-i18n="hint">← → anda · espaço pula</p>
+
+    <div id="touch-controls">
+      <button class="tbtn" data-hold="left" type="button">◀</button>
+      <button class="tbtn" data-hold="jump" type="button">▲</button>
+      <button class="tbtn" data-hold="right" type="button">▶</button>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span data-i18n="footer">feito com HTML · CSS · JS · Lara Alves, 2026</span>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
